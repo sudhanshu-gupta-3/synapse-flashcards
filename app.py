@@ -1,6 +1,6 @@
 import os
 import uuid
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from config import Config
@@ -131,7 +131,7 @@ def create_app():
     @app.route('/api/decks/<int:deck_id>/review', methods=['GET'])
     def get_review_cards(deck_id):
         deck = Deck.query.get_or_404(deck_id)
-        now = datetime.now(timezone.utc)
+        now = datetime.utcnow()
         limit = request.args.get('limit', 20, type=int)
 
         # Get due cards (review) + new cards
@@ -174,14 +174,14 @@ def create_app():
         card.ease_factor = new_ef
         card.interval = new_interval
         card.next_review = get_next_review_date(new_interval)
-        card.last_reviewed = datetime.now(timezone.utc)
+        card.last_reviewed = datetime.utcnow()
 
         # Log review
         log = ReviewLog(card_id=card.id, quality=quality)
         db.session.add(log)
 
         # Update study session
-        today = datetime.now(timezone.utc).date()
+        today = datetime.utcnow().date()
         session = StudySession.query.filter_by(date=today).first()
         if not session:
             session = StudySession(date=today, cards_reviewed=0, cards_correct=0)
@@ -245,7 +245,7 @@ def create_app():
         new_cards = Card.query.filter(Card.repetitions == 0).count()
 
         # Streak calculation
-        today = datetime.now(timezone.utc).date()
+        today = datetime.utcnow().date()
         streak = 0
         check_date = today
         while True:
@@ -283,7 +283,7 @@ def create_app():
 
     @app.route('/api/stats/heatmap', methods=['GET'])
     def get_heatmap():
-        today = datetime.now(timezone.utc).date()
+        today = datetime.utcnow().date()
         start_date = today - timedelta(days=90)
         sessions = StudySession.query.filter(StudySession.date >= start_date).all()
         heatmap = {}

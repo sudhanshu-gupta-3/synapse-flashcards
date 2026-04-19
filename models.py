@@ -1,7 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime, timezone
+from datetime import datetime, timedelta
 
 db = SQLAlchemy()
+
+
+def utcnow():
+    """Return naive UTC datetime (SQLite compatible)."""
+    return datetime.utcnow()
 
 
 class Deck(db.Model):
@@ -9,9 +14,8 @@ class Deck(db.Model):
     name = db.Column(db.String(200), nullable=False)
     description = db.Column(db.Text, default='')
     tags = db.Column(db.String(500), default='')
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-    updated_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc),
-                           onupdate=lambda: datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime, default=utcnow)
+    updated_at = db.Column(db.DateTime, default=utcnow, onupdate=utcnow)
     cards = db.relationship('Card', backref='deck', lazy=True, cascade='all, delete-orphan')
 
     def to_dict(self):
@@ -19,7 +23,7 @@ class Deck(db.Model):
         mastered = sum(1 for c in cards_list if c.repetitions >= 5 and c.ease_factor >= 2.0)
         learning = sum(1 for c in cards_list if 0 < c.repetitions < 5)
         new_count = sum(1 for c in cards_list if c.repetitions == 0)
-        due_now = sum(1 for c in cards_list if c.next_review and c.next_review <= datetime.now(timezone.utc))
+        due_now = sum(1 for c in cards_list if c.next_review and c.next_review <= utcnow())
         return {
             'id': self.id,
             'name': self.name,
@@ -43,13 +47,13 @@ class Card(db.Model):
     card_type = db.Column(db.String(50), default='concept')
     difficulty = db.Column(db.String(20), default='medium')
     tags = db.Column(db.String(500), default='')
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime, default=utcnow)
 
     # SM-2 fields
     ease_factor = db.Column(db.Float, default=2.5)
     interval = db.Column(db.Integer, default=0)
     repetitions = db.Column(db.Integer, default=0)
-    next_review = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    next_review = db.Column(db.DateTime, default=utcnow)
     last_reviewed = db.Column(db.DateTime, nullable=True)
 
     reviews = db.relationship('ReviewLog', backref='card', lazy=True, cascade='all, delete-orphan')
@@ -80,11 +84,11 @@ class ReviewLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     card_id = db.Column(db.Integer, db.ForeignKey('card.id'), nullable=False)
     quality = db.Column(db.Integer, nullable=False)
-    reviewed_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    reviewed_at = db.Column(db.DateTime, default=utcnow)
 
 
 class StudySession(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.Date, default=lambda: datetime.now(timezone.utc).date())
+    date = db.Column(db.Date, default=lambda: utcnow().date())
     cards_reviewed = db.Column(db.Integer, default=0)
     cards_correct = db.Column(db.Integer, default=0)

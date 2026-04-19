@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 
 
 def sm2_algorithm(quality, repetitions, ease_factor, interval):
@@ -6,13 +6,6 @@ def sm2_algorithm(quality, repetitions, ease_factor, interval):
     SM-2 Spaced Repetition Algorithm.
 
     quality: 0-5 rating
-        0 - Complete blackout
-        1 - Wrong, but recognized answer
-        2 - Wrong, but answer seemed easy to recall
-        3 - Correct with serious difficulty
-        4 - Correct with some hesitation
-        5 - Perfect response
-
     Returns: (new_repetitions, new_ease_factor, new_interval)
     """
     if quality >= 3:
@@ -35,7 +28,7 @@ def sm2_algorithm(quality, repetitions, ease_factor, interval):
 
 def get_next_review_date(interval):
     """Calculate next review date from interval in days."""
-    return datetime.now(timezone.utc) + timedelta(days=interval)
+    return datetime.utcnow() + timedelta(days=interval)
 
 
 def get_card_status(repetitions, ease_factor):
