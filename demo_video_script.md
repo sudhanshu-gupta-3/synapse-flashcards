@@ -1,151 +1,144 @@
-# Synapse — 2-Minute Demo Video Script (Final)
+# Synapse — Demo Video Script (You Explaining)
 
-> **Duration:** 2:00 – 2:15  
-> **Tone:** Confident, warm, product-launch energy  
-> **Music:** Lo-fi chill or soft electronic, 20% volume under narration  
-
----
-
-## SCENE 1 — Hook (0:00 – 0:10)
-
-**[SCREEN]:** Black. Text fades in, one line at a time, center-aligned:
-
-> *"You read the chapter three times."*  
-> *"You still forgot it on the exam."*
-
-**Text dissolves. Synapse logo fades in — purple-to-teal gradient.**
-
-**🎙️ NARRATION:**
-> "What if studying actually worked? This is Synapse."
+> **Duration:** 2:30 – 3:00
+> **Style:** You screen-sharing and talking through the app, like a live demo
+> **Tip:** Be natural and conversational. You built this — show it with pride.
 
 ---
 
-## SCENE 2 — Drop a PDF (0:10 – 0:40)
+## INTRO (0:00 – 0:20)
 
-**[SCREEN]:** App opens to the Dashboard. Dark, premium UI. Stats cards show 0 — it's a fresh start.
+*Start with your screen showing the Synapse dashboard.*
 
-**🎙️ NARRATION:**  
-> "Here's how it works. You have a PDF — a chapter on quadratic equations, notes on the French Revolution, anything."
-
-**[DO THIS]:** Click "Upload PDF" in the sidebar. The upload zone appears.
-
-**🎙️ NARRATION:**  
-> "Drop it in."
-
-**[DO THIS]:** Drag a PDF file into the upload zone. Progress bar animates. Status changes: "Uploading..." → "Generating flashcards with AI..." → Confetti bursts 🎉
-
-**🎙️ NARRATION:**  
-> "In seconds, Synapse reads the entire document — not just keywords, but concepts, relationships, and structure — and generates 25+ smart flashcards."
-
-**[DO THIS]:** App auto-navigates to the deck view. Scroll slowly through the card list.
-
-**🎙️ NARRATION:**  
-> "Definitions. Comparisons. Edge cases. Worked examples. Cards that feel like they were written by a great teacher — because the AI is designed to think like one."
+> "Hey! So I built Synapse — it's a flashcard app that takes any PDF and turns it into a smart deck of flashcards using AI."
+>
+> "The idea is simple: we all know re-reading notes doesn't really work. Cognitive science says active recall and spaced repetition are way more effective. But nobody has time to sit and make flashcards manually. So Synapse does it for you."
 
 ---
 
-## SCENE 3 — The Review (0:40 – 1:20)
+## UPLOADING A PDF (0:20 – 0:55)
 
-**[DO THIS]:** Click "▶ Start Review". Full-screen review mode loads. A question card appears.
+*Click "Upload PDF" in the sidebar.*
 
-**🎙️ NARRATION:**  
-> "When you're ready — start a review."
+> "Let me show you how it works. I'll click Upload PDF here..."
 
-**[DO THIS]:** Pause 2 seconds on the question. Then click the card — it flips with a smooth 3D animation. The answer is revealed.
+*Drag and drop a PDF file into the upload zone.*
 
-**🎙️ NARRATION:**  
-> "Read the question. Think. Flip."
+> "I have this chapter on quadratic equations. I'll just drag it in..."
 
-**[DO THIS]:** Four rating buttons appear at the bottom: Again (red), Hard (yellow), Good (purple), Easy (green). Click "Good".
+*Wait for the progress bar and generation.*
 
-**🎙️ NARRATION:**  
-> "Rate how well you knew it. That's the key to everything."
+> "So right now it's uploading the PDF, extracting all the text using pdfplumber, and then sending it to Google's Gemini AI to generate the flashcards."
 
-**[DO THIS]:** Next card slides in. Flip → click "Easy". Next card → flip → click "Again".
+*Confetti plays, auto-navigates to deck view.*
 
-**🎙️ NARRATION:**  
-> "Behind the scenes, Synapse uses the SM-2 spaced repetition algorithm. Cards you know well won't come back for days — or weeks. Cards you struggle with show up again in minutes. Your brain gets tested at the exact moment you're about to forget."
+> "And done! It generated 25 cards from that one PDF. Now the key thing here is — these aren't just simple 'what is X' cards. Let me scroll through..."
 
-**[DO THIS]:** Complete the session. Session summary appears with stats. If accuracy ≥ 70%, confetti plays.
+*Scroll slowly through the card list.*
+
+> "You can see there are different types — definitions, concepts, relationships, edge cases, even worked examples. Each card is tagged by type and difficulty. The AI is prompted to think like a teacher, not just extract keywords."
 
 ---
 
-## SCENE 4 — See Your Progress (1:20 – 1:45)
+## THE REVIEW EXPERIENCE (0:55 – 1:40)
 
-**[DO THIS]:** Click "Dashboard" in the sidebar. The dashboard now shows updated stats.
+*Click "Start Review".*
 
-**🎙️ NARRATION:**  
-> "Every session builds your mastery — and Synapse makes it visible."
+> "Now let's say I want to study. I click Start Review..."
 
-**[DO THIS]:** Slowly highlight each element on screen:
+*A flashcard appears with the question.*
 
-**🎙️ NARRATION:**  
-> "Total cards tracked. Study streaks. Accuracy rate. Mastery rings that fill as you learn. An activity heatmap that shows your consistency over weeks."
+> "So here's my first card. I read the question, I think about it..."
 
-**[DO THIS]:** Hover over a deck card — the mastery bar shows green/yellow/gray segments.
+*Click the card to flip it.*
 
-**🎙️ NARRATION:**  
-> "You can see exactly what you've mastered, what's shaky, and what's coming up for review. Motivating — not overwhelming."
+> "Then I flip it — and there's the answer."
 
----
+*Point at the rating buttons.*
 
-## SCENE 5 — The Close (1:45 – 2:10)
+> "Now this is the important part. I rate how well I knew it — Again, Hard, Good, or Easy. This rating feeds into the SM-2 spaced repetition algorithm."
 
-**[SCREEN]:** Stay on dashboard. Slowly zoom out or let the UI breathe.
+*Click "Good".*
 
-**🎙️ NARRATION:**  
-> "No account needed. No setup. No app to install. Drop a PDF — and start learning the way your brain was designed to."
+> "So I'll click Good here. What SM-2 does is — it calculates when to show me this card again. If I said Easy, it might not come back for a week. If I said Again, it'll show up again in like a minute. The intervals keep growing as I master the card — 1 day, then 6 days, then 15, then 38."
 
-**[SCREEN]:** Dashboard fades. Dark background. Text appears center-screen:
+*Flip and rate 2-3 more cards quickly.*
 
-> **Stop re-reading. Start remembering.**
+> "So cards I'm struggling with keep appearing. Cards I know well fade away. I only spend time where it actually matters."
 
-> **Synapse** — your PDF, your flashcards, your pace.
+*Complete the session — session summary appears.*
 
-**[SCREEN]:** Links fade in below:
-
-> 🔗 **Try it live** → https://synapse-flashcards.onrender.com  
-> 📂 **Source code** → github.com/sudhanshu-gupta-3/synapse-flashcards
-
-**[MUSIC]:** Fades out over 3 seconds.
+> "And when I finish a session, I get a summary — how many cards I reviewed, how many I got right, my accuracy. If I did well, I get confetti too."
 
 ---
 
-## 🎬 Recording Checklist
+## DASHBOARD & PROGRESS (1:40 – 2:10)
 
-Before hitting record:
+*Click "Dashboard" in sidebar.*
 
-- [ ] Open the app (deployed URL or `localhost:5000`)
-- [ ] Delete any old test decks for a clean start
-- [ ] Have a **real PDF ready** (2-5 page textbook chapter works best)
-- [ ] Set screen resolution to **1920×1080**
-- [ ] Open **OBS Studio** or **Loom** for recording
-- [ ] Close all other browser tabs
-- [ ] Turn off notifications
+> "Now let's go back to the dashboard. This is where I can track my progress over time."
 
-Recording order:
+*Point at each element as you mention it.*
 
-- [ ] Record the full app flow in one take (Dashboard → Upload → Deck → Review → Dashboard)
-- [ ] Record narration separately in a quiet room
-- [ ] Sync narration + screen recording in editor
-- [ ] Add intro/outro text overlays
-- [ ] Add background music at low volume
-- [ ] Export at 1080p, 30fps
+> "Here I can see my total cards, my study streak, my accuracy rate, and how many cards I've mastered."
 
-## ⏱️ Scene Timing
+*Point at the heatmap.*
 
-| # | Scene | Duration | Key Moment |
-|---|-------|----------|-----------|
-| 1 | Hook | 10s | "You still forgot it on the exam" |
-| 2 | PDF Upload | 30s | Drag & drop → confetti → card list |
-| 3 | Review | 40s | Card flip → rating → SM-2 explained |
-| 4 | Progress | 25s | Dashboard stats, heatmap, mastery ring |
-| 5 | Close | 25s | Tagline + links |
-| | **Total** | **~2:10** | |
+> "This is a 90-day activity heatmap — similar to GitHub's contribution graph. It shows how consistent I've been with my studying."
 
-## 🎵 Resources
+*Point at the deck card with the mastery bar.*
 
-- **Screen Recording:** [OBS Studio](https://obsproject.com/) (free)
-- **Video Editing:** [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) (free) or [CapCut](https://www.capcut.com/)
-- **Background Music:** [pixabay.com/music](https://pixabay.com/music/) — search "lo-fi study" or "soft electronic"
-- **Narration Cleanup:** [Audacity](https://www.audacityteam.org/) (free)
+> "And each deck has a mastery bar — green means mastered, yellow means still learning, gray means new. So at a glance I know exactly where I stand."
+
+*Click "Statistics" in sidebar.*
+
+> "There's also a detailed stats page with all the analytics."
+
+---
+
+## DECK MANAGEMENT (2:10 – 2:25)
+
+*Go back to the deck view.*
+
+> "I can also manage my decks — I can edit any card, delete cards I don't need, or add my own custom cards manually."
+
+*Click the edit button on a card (or the Add Card button).*
+
+> "And I have full-text search across all decks and cards, so as I build up dozens of decks over a semester, I can always find what I need."
+
+---
+
+## CLOSING (2:25 – 2:50)
+
+*Stay on dashboard or deck view.*
+
+> "So to summarize — the whole flow is: drop a PDF, get AI-generated flashcards, review them with spaced repetition, and track your mastery over time."
+>
+> "The tech stack is Python and Flask on the backend, Gemini API for card generation, SM-2 for the spaced repetition scheduling, and vanilla HTML, CSS, JavaScript on the frontend. No frameworks, no bloat."
+>
+> "The app is fully deployed and live. There's no signup needed — you just open it, upload a PDF, and start learning."
+>
+> "That's Synapse. Thanks for watching!"
+
+---
+
+## TIPS FOR RECORDING
+
+1. **Talk naturally.** Don't read word-for-word — use the script as a guide and speak in your own voice.
+2. **Move your mouse slowly.** Point at things you're talking about so the viewer follows.
+3. **Pause after actions.** Give the viewer 1-2 seconds to see what happened before talking about it.
+4. **Use a real PDF.** A textbook chapter or class notes will look much better than a test file.
+5. **Record in one take if possible.** It feels more authentic. You can always trim pauses in editing.
+6. **Keep it under 3 minutes.** Judges watch a lot of videos — shorter is better.
+
+## TIMING
+
+| Section | Duration | What You Show |
+|---------|----------|--------------|
+| Intro | 20s | Dashboard, explain the problem |
+| Upload PDF | 35s | Drag PDF → generation → card list |
+| Review | 45s | Card flip → rating → SM-2 explanation |
+| Dashboard | 30s | Stats, heatmap, mastery bar |
+| Deck Management | 15s | Edit, add, search |
+| Closing | 25s | Summary, tech stack, CTA |
+| **Total** | **~2:50** | |
