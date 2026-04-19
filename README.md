@@ -2,6 +2,8 @@
 
 > Turn any PDF into a smart, practice-ready flashcard deck with AI-powered generation and spaced repetition.
 
+🔗 **Live Demo:** [https://synapse-flashcards.onrender.com](https://synapse-flashcards.onrender.com)
+
 ![Python](https://img.shields.io/badge/Python-3.9+-blue) ![Flask](https://img.shields.io/badge/Flask-3.x-green) ![License](https://img.shields.io/badge/License-MIT-purple)
 
 ## ✨ Features
